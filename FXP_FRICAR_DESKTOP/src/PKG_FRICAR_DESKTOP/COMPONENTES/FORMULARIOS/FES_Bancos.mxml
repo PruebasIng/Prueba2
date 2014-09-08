@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="110">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Label x="10" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="B"/>
+	<s:Label x="26" y="-16.9" color="#000000" fontFamily="Georgia" fontSize="16" text="ANCOS"/>
+	<s:TextInput x="10" y="10" width="378" prompt="Nombre"/>
+	<s:TextInput x="10" y="40" width="378" prompt="Sucursal"/>
+</s:Panel>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="500" height="74">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:ComboBox id="Cbx_Tipo_Cuenta" x="10" y="10" width="165" prompt="Tipo de Cuenta">
+		<s:dataProvider>
+			<mx:ArrayList>
+				<fx:String>Ahorros</fx:String>
+				<fx:String>Corriente</fx:String>
+			</mx:ArrayList>
+		</s:dataProvider>
+	</s:ComboBox>	
+	<s:TextInput id="Txt_Nro_Cuenta" x="198" y="10" width="292" prompt="Nro Cuenta"/>
+	<s:ComboBox id="Cbx_Banco" x="10" y="40" width="480" prompt="Banco"/>
+</s:Group>

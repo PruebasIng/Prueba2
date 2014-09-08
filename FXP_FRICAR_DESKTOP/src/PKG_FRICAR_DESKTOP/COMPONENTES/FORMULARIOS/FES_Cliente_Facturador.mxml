@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 xmlns:ns1="*"
+		 width="368" height="170">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Label x="10" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="D"/>
+	<s:Label x="29" y="-16.9" color="#000000" fontFamily="Georgia" fontSize="16" text="ATOS"/>
+	<s:Label x="83" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="F"/>
+	<s:Label x="98" y="-16.9" color="#000000" fontFamily="Georgia" fontSize="16" text="ACTURADOR"/>	
+	
+	<ns1:KCS_Tipo_Documento id="Cbx_Tipo_Documento" x="6" y="20" width="172">
+	</ns1:KCS_Tipo_Documento>
+	<ns1:KCS_Documento id="Txt_Documento" x="191" y="21" width="110"/>
+	<ns1:KCS_Digito_Verificacion id="Lbl_Digito" x="311" y="21" width="45" height="20"/>
+	<ns1:KCS_Nombres id="Txt_Nombres" x="6" y="52" width="172">
+	</ns1:KCS_Nombres>
+	<ns1:KCS_Apellidos id="Txt_Apellidos" x="191" y="52" width="165">
+	</ns1:KCS_Apellidos>
+	<ns1:KCS_Email id="Txt_Email" x="6" y="84" width="350">
+	</ns1:KCS_Email>
+</s:Panel>

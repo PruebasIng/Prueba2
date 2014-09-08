@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="500" height="118">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:TextInput id="Txt_Codigo" x="10" y="10" width="102" prompt="Codigo"/>
+	<s:TextInput id="Txt_Descripcion" x="120" y="10" width="370" prompt="Descripcion"/>
+	<s:ComboBox id="Cbx_Presentacion" x="10" y="46" width="102" prompt="Presentacion">
+		<s:dataProvider>
+			<mx:ArrayList>
+				<fx:String>Kilogramos</fx:String>
+				<fx:String>Gramos</fx:String>
+				<fx:String>Libras</fx:String>
+				<fx:String>Litros</fx:String>
+			</mx:ArrayList>
+		</s:dataProvider>
+	</s:ComboBox>	
+	<s:TextInput id="Txt_Precio" x="120" y="46.5" width="100" prompt="Precio "/>
+	<s:Label x="231" y="46" fontSize="24" text="/"/>
+	<s:Label x="262" y="51.5" text="Pre"/>
+	<s:HGroup x="10" y="89" width="480">
+		<s:TextInput id="Txt_Iva" x="10" y="85.5" width="20%" prompt="Iva"/>
+		<s:TextInput id="Txt_R_Iva" x="120" y="86.5" width="20%" prompt="R - Iva"/>
+		<s:TextInput id="Txt_R_Fuente" x="228" y="87.5" width="20%" prompt="R - Fuente"/>
+		<s:TextInput id="Txt_Ind_Comercio" x="337" y="88" width="20%" prompt="Ind. y Com."/>
+		<s:TextInput id="Txt_Cree" x="446" y="88" width="20%" prompt="CREE"/>
+	</s:HGroup>
+	
+</s:Group>

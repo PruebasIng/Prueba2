@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 height="177">
+	<fx:Declarations>
+		<s:RadioButtonGroup id="Rdb_Org"/>
+		<s:RadioButtonGroup id="Rdb_Fisico"/>
+		<s:RadioButtonGroup id="Rdb_Def_Men"/>
+		<s:RadioButtonGroup id="Rdb_Trans_Entrega"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Label x="10" y="13" text="Organolepticos"/>
+	<s:HGroup x="119" y="10" gap="20">
+		<s:RadioButton label="C" groupName="Rdb_Org"/>
+		<s:RadioButton label="NC" groupName="Rdb_Org"/>
+	</s:HGroup>
+	<s:Label x="10" y="96" text="Fisicoquimico"/>
+	<s:HGroup x="119" y="93" gap="20">
+		<s:RadioButton label="C" groupName="Rdb_Fisico"/>
+		<s:RadioButton label="NC" groupName="Rdb_Fisico"/>
+	</s:HGroup>
+	<s:Label x="251" y="13" text="Defectos Menores"/>
+	<s:HGroup x="399" y="10" gap="20">
+		<s:RadioButton label="C" groupName="Rdb_Def_Men"/>
+		<s:RadioButton label="NC" groupName="Rdb_Def_Men"/>
+	</s:HGroup>
+	<s:Label x="251" y="96" text="Transporte y Condicion&#xd;de Entrega"/>
+	<s:HGroup x="399" y="93" gap="20">
+		<s:RadioButton label="C" groupName="Rdb_Trans_Entrega"/>
+		<s:RadioButton label="NC" groupName="Rdb_Trans_Entrega"/>
+	</s:HGroup>
+	<s:TextArea x="10" y="33" width="194" height="43"/>
+	<s:TextArea x="251" y="33" width="194" height="43"/>
+	<s:TextArea x="10" y="130" width="194" height="43"/>
+	<s:TextArea x="251" y="130" width="194" height="43"/>
+</s:Group>

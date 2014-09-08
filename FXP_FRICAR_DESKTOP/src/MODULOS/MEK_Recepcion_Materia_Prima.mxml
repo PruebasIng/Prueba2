@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Module xmlns:fx="http://ns.adobe.com/mxml/2009"
+		   xmlns:s="library://ns.adobe.com/flex/spark"
+		   xmlns:mx="library://ns.adobe.com/flex/mx"
+		   xmlns:COMPONENTES="PKG_FRICAR_DESKTOP.COMPONENTES.*"
+		   xmlns:ns1="*"
+		   width="1265" height="657" layout="absolute">
+	<fx:Style source="STYLES/Style_Panel.css"/>
+	<fx:Declarations>
+		<s:RadioButtonGroup id="Rdb_Status_Factura"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Panel x="7" y="31" width="676" height="485">
+		<COMPONENTES:KES_Cbx_Mat_Insu x="21" y="10" width="314"/>
+		<s:ComboBox x="354" y="10" width="302" prompt="Proveedor"/>
+		<s:ComboBox x="21" y="41" width="314" prompt="Referencia"/>
+		<s:Label x="357" y="47" text="Valor Unitario:"/>
+		<s:Label x="442" y="47" text="$"/>
+		<s:Label x="499" y="47" text="/"/>
+		<s:Label x="509" y="47" text="Presentacion"/>
+		<s:Label x="596" y="47" text="Plazo:"/>
+		<s:TextInput x="21" y="72" prompt="Cantidad"/>
+		<s:Label x="176" y="77" text="Valor Total:"/>
+		<s:Label x="256" y="77" text="$"/>
+		<mx:AdvancedDataGrid id="adg_Referencias_Factura" x="21" y="131" width="635" alpha="0.7"
+							 designViewDataType="flat">
+			<mx:columns>
+				<mx:AdvancedDataGridColumn dataField="col1" headerText="Referencia"/>
+				<mx:AdvancedDataGridColumn dataField="col2" headerText="Cantidad"/>
+				<mx:AdvancedDataGridColumn dataField="col3" headerText="Valor"/>
+			</mx:columns>
+		</mx:AdvancedDataGrid>
+		<s:TextInput x="21" y="316" width="150" prompt="Nro. Factura"/>
+		<ns1:KCS_Btn_Agregar x="21" y="102"/>
+		<ns1:KCS_Btn_Eliminar x="574" y="102"/>
+		<s:ComboBox x="189" y="315.5" prompt="Placa"/>
+		<s:ComboBox x="354" y="315.5" width="193" prompt="Nro. Identificacion Conductor"/>
+		<s:TextInput x="21" y="346" width="314" prompt="Nombres"/>
+		<s:Label x="21" y="390" text="Factura"/>
+		<s:Label x="631" y="47" text="dias"/>
+		<s:HGroup x="85" y="387">
+			<s:RadioButton label="Aceptada" groupName="Rdb_Status_Factura"/>
+			<s:RadioButton label="Pendiente" groupName="Rdb_Status_Factura"/>
+		</s:HGroup>
+		<s:TextInput visible="true" x="359" y="385"/>
+		<s:TextInput visible="true" x="522" y="385"/>
+	</s:Panel>
+</mx:Module>

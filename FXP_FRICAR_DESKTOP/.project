@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>FXP_FRICAR_DESKTOP</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.apollobuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.apollonature</nature>
+		<nature>com.adobe.flexbuilder.project.flexnature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] COMPONENTES</name>
+			<type>2</type>
+			<location>C:/Users/ADMINISTRADOR/Desktop/WORKSPACE/WS_CLOUD/FXP_CLOUD/src/PKG_CLOUD/COMPONENTES</location>
+		</link>
+		<link>
+			<name>bin-debug</name>
+			<type>2</type>
+			<location>C:/xampp/htdocs/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP</location>
+		</link>
+		<link>
+			<name>services/MeproveedorService.php</name>
+			<type>1</type>
+			<location>C:/xampp/htdocs/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP/services/MeproveedorService.php</location>
+		</link>
+		<link>
+			<name>services/MereferenciaService.php</name>
+			<type>1</type>
+			<location>C:/xampp/htdocs/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP/services/MereferenciaService.php</location>
+		</link>
+	</linkedResources>
+</projectDescription>

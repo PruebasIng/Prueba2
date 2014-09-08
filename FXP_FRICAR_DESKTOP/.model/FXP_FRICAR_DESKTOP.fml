@@ -1,0 +1,291 @@
+
+<model xmlns="http://ns.adobe.com/Fiber/1.0">
+  <annotation name="ActionScriptGeneration">
+    <item name="FullyQualifyReferences">true</item>
+  </annotation>
+  <service name="MeproveedorService">
+    <annotation name="ActionScriptGeneration">
+      <item name="Source">MeproveedorService</item>
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services.meproveedorservice</item>
+      <item name="Endpoint">http://localhost:8080/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP/gateway.php</item>
+      <item name="Destination">MeproveedorService</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">PHP</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="PHP_RELATIVE_LOCATION">FXP_FRICAR_DESKTOP/services/MeproveedorService.php</item>
+      <item name="PHP_SERVER_ROOT">C:\xampp\htdocs\FXP_FRICAR_DESKTOP</item>
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="PHP_SERVICES_FOLDER">C:\xampp\htdocs\FXP_FRICAR_DESKTOP\FXP_FRICAR_DESKTOP\services</item>
+      <item name="PHP_LOCATION">C:/xampp/htdocs/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP/services/MeproveedorService.php</item>
+      <item name="LINKED_FILE">MeproveedorService.php</item>
+      <item name="PHP_SERVER_ROOT_URL">http://localhost:8080/FXP_FRICAR_DESKTOP</item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8080/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP/gateway.php</item>
+      <item name="PHP_CLASS_NAME">MeproveedorService</item>
+    </annotation>
+    <function name="getAllMe_proveedor" return-type="Me_proveedor[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMe_proveedorByID" return-type="Me_proveedor">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="createMe_proveedor" return-type="string">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Me_proveedor"/>
+    </function>
+    <function name="updateMe_proveedor" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Me_proveedor"/>
+    </function>
+    <function name="deleteMe_proveedor" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="count" return-type="integer">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMe_proveedor_paged" return-type="Me_proveedor[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque,opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="startIndex" type="integer"/>
+      <parameter name="numItems" type="integer"/>
+    </function>
+  </service>
+  <entity name="Me_proveedor" persistent="true">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Me_proveedor</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">MeproveedorService</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="DataManagement">
+      <item name="create">createMe_proveedor</item>
+      <item name="update">updateMe_proveedor</item>
+      <item name="get">getMe_proveedorByID</item>
+      <item name="delete">deleteMe_proveedor</item>
+      <item name="fillFunc">getAllMe_proveedor,getMe_proveedor_paged</item>
+      <item name="managingService">MeproveedorService</item>
+    </annotation>
+    <annotation name="getMe_proveedorByID">
+      <item name="propertySpecifier">Tipo_Doc_Proveedor,Id_Proveedor,Nombre_Proveedor,Direccion_Proveedor,Tel_Proveedor,Cel_Proveedor,Email_Proveedor,Tipo_Contribuyente,Tipo_Regimen,Materia_Prima,Plazo_Negociacion,Forma_Pago,Estado_Proveedor,Tipo_Doc_Representante,Id_Representante,Nombres_Representante,Apellidos_Representante,Nom_Com_Representante,Email_Representante,Tipo_Doc_Contacto,Id_Contacto,Nombres_Contacto,Apellidos_Contacto,Nom_Com_Contacto,Email_Contacto,Tel_Contacto,Cel_Contacto</item>
+    </annotation>
+    <annotation name="getAllMe_proveedor">
+      <item name="propertySpecifier">Tipo_Doc_Proveedor,Id_Proveedor,Nombre_Proveedor,Direccion_Proveedor,Tel_Proveedor,Cel_Proveedor,Email_Proveedor,Tipo_Contribuyente,Tipo_Regimen,Materia_Prima,Plazo_Negociacion,Forma_Pago,Estado_Proveedor,Tipo_Doc_Representante,Id_Representante,Nombres_Representante,Apellidos_Representante,Nom_Com_Representante,Email_Representante,Tipo_Doc_Contacto,Id_Contacto,Nombres_Contacto,Apellidos_Contacto,Nom_Com_Contacto,Email_Contacto,Tel_Contacto,Cel_Contacto</item>
+    </annotation>
+    <annotation name="getMe_proveedor_paged">
+      <item name="propertySpecifier">Tipo_Doc_Proveedor,Id_Proveedor,Nombre_Proveedor,Direccion_Proveedor,Tel_Proveedor,Cel_Proveedor,Email_Proveedor,Tipo_Contribuyente,Tipo_Regimen,Materia_Prima,Plazo_Negociacion,Forma_Pago,Estado_Proveedor,Tipo_Doc_Representante,Id_Representante,Nombres_Representante,Apellidos_Representante,Nom_Com_Representante,Email_Representante,Tipo_Doc_Contacto,Id_Contacto,Nombres_Contacto,Apellidos_Contacto,Nom_Com_Contacto,Email_Contacto,Tel_Contacto,Cel_Contacto</item>
+      <item name="pagingEnabled">true</item>
+      <item name="positionalPagingParameters">true</item>
+      <item name="countOperation">count</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="Tipo_Doc_Proveedor" type="integer"/>
+    <id name="Id_Proveedor" type="string"/>
+    <property name="Nombre_Proveedor" type="string"/>
+    <property name="Direccion_Proveedor" type="string"/>
+    <property name="Tel_Proveedor" type="string"/>
+    <property name="Cel_Proveedor" type="string"/>
+    <property name="Email_Proveedor" type="string"/>
+    <property name="Tipo_Contribuyente" type="integer"/>
+    <property name="Tipo_Regimen" type="integer"/>
+    <property name="Materia_Prima" type="string"/>
+    <property name="Plazo_Negociacion" type="integer"/>
+    <property name="Forma_Pago" type="integer"/>
+    <property name="Estado_Proveedor" type="integer"/>
+    <property name="Tipo_Doc_Representante" type="integer"/>
+    <property name="Id_Representante" type="string"/>
+    <property name="Nombres_Representante" type="string"/>
+    <property name="Apellidos_Representante" type="string"/>
+    <property name="Nom_Com_Representante" type="string"/>
+    <property name="Email_Representante" type="string"/>
+    <property name="Tipo_Doc_Contacto" type="integer"/>
+    <property name="Id_Contacto" type="string"/>
+    <property name="Nombres_Contacto" type="string"/>
+    <property name="Apellidos_Contacto" type="string"/>
+    <property name="Nom_Com_Contacto" type="string"/>
+    <property name="Email_Contacto" type="string"/>
+    <property name="Tel_Contacto" type="string"/>
+    <property name="Cel_Contacto" type="string"/>
+  </entity>
+  <service name="MereferenciaService">
+    <annotation name="ActionScriptGeneration">
+      <item name="Source">MereferenciaService</item>
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services.mereferenciaservice</item>
+      <item name="Endpoint">http://localhost:8080/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP/gateway.php</item>
+      <item name="Destination">MereferenciaService</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">PHP</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="PHP_RELATIVE_LOCATION">FXP_FRICAR_DESKTOP/services/MereferenciaService.php</item>
+      <item name="PHP_SERVER_ROOT">C:\xampp\htdocs\FXP_FRICAR_DESKTOP</item>
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="PHP_SERVICES_FOLDER">C:\xampp\htdocs\FXP_FRICAR_DESKTOP\FXP_FRICAR_DESKTOP\services</item>
+      <item name="PHP_LOCATION">C:/xampp/htdocs/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP/services/MereferenciaService.php</item>
+      <item name="LINKED_FILE">MereferenciaService.php</item>
+      <item name="PHP_SERVER_ROOT_URL">http://localhost:8080/FXP_FRICAR_DESKTOP</item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8080/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP/gateway.php</item>
+      <item name="PHP_CLASS_NAME">MereferenciaService</item>
+    </annotation>
+    <function name="getAllMe_referencia" return-type="Me_referencia[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMe_referenciaByID" return-type="Me_referencia">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="createMe_referencia" return-type="string">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Me_referencia"/>
+    </function>
+    <function name="updateMe_referencia" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="item" type="Me_referencia"/>
+    </function>
+    <function name="deleteMe_referencia" return-type="void">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="itemID" type="string"/>
+    </function>
+    <function name="count" return-type="integer">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">opaque</item>
+      </annotation>
+    </function>
+    <function name="getMe_referencia_paged" return-type="Me_referencia[]">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">opaque,opaque</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <parameter name="startIndex" type="integer"/>
+      <parameter name="numItems" type="integer"/>
+    </function>
+  </service>
+  <entity name="Me_referencia" persistent="true">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Me_referencia</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">MereferenciaService</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="DataManagement">
+      <item name="create">createMe_referencia</item>
+      <item name="update">updateMe_referencia</item>
+      <item name="get">getMe_referenciaByID</item>
+      <item name="delete">deleteMe_referencia</item>
+      <item name="fillFunc">getAllMe_referencia,getMe_referencia_paged</item>
+      <item name="managingService">MereferenciaService</item>
+    </annotation>
+    <annotation name="getMe_referenciaByID">
+      <item name="propertySpecifier">Id_Proveedor,Cod_Referencia,Descripcion,Presentacion,Precio,Iva,Rete_Iva,Rete_Fuente,Indus_Comercio,CREE</item>
+    </annotation>
+    <annotation name="getAllMe_referencia">
+      <item name="propertySpecifier">Id_Proveedor,Cod_Referencia,Descripcion,Presentacion,Precio,Iva,Rete_Iva,Rete_Fuente,Indus_Comercio,CREE</item>
+    </annotation>
+    <annotation name="getMe_referencia_paged">
+      <item name="propertySpecifier">Id_Proveedor,Cod_Referencia,Descripcion,Presentacion,Precio,Iva,Rete_Iva,Rete_Fuente,Indus_Comercio,CREE</item>
+      <item name="pagingEnabled">true</item>
+      <item name="positionalPagingParameters">true</item>
+      <item name="countOperation">count</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="Id_Proveedor" type="string"/>
+    <id name="Cod_Referencia" type="string"/>
+    <property name="Descripcion" type="string"/>
+    <property name="Presentacion" type="integer"/>
+    <property name="Precio" type="integer"/>
+    <property name="Iva" type="integer"/>
+    <property name="Rete_Iva" type="integer"/>
+    <property name="Rete_Fuente" type="integer"/>
+    <property name="Indus_Comercio" type="integer"/>
+    <property name="CREE" type="integer"/>
+  </entity>
+</model>
