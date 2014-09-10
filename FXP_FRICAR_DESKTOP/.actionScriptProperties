@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <actionScriptProperties analytics="false" mainApplicationPath="FXP_FRICAR_DESKTOP.mxml" projectUUID="2c0c8e78-8ed4-48ed-bc7b-5c4aa5c75fa5" version="10">
   <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="false" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderLocation="C:/xampp/htdocs/FXP_FRICAR_DESKTOP/FXP_FRICAR_DESKTOP" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="true" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
-    <compilerSourcePath>
-      <compilerSourcePathEntry kind="1" linkType="1" path="C:/Users/ADMINISTRADOR/Desktop/WORKSPACE/WS_CLOUD/FXP_CLOUD/src/PKG_CLOUD/COMPONENTES"/>
-    </compilerSourcePath>
+    <compilerSourcePath/>
     <libraryPath defaultLinkType="0">
       <libraryPathEntry kind="4" path="">
         <excludedEntries>
@@ -42,5 +40,3 @@
     </buildTarget>
   </buildTargets>
 </actionScriptProperties>
-
-

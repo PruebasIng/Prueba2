@@ -31,8 +31,6 @@
 			</mx:columns>
 		</mx:AdvancedDataGrid>
 		<s:TextInput x="21" y="316" width="150" prompt="Nro. Factura"/>
-		<ns1:KCS_Btn_Agregar x="21" y="102"/>
-		<ns1:KCS_Btn_Eliminar x="574" y="102"/>
 		<s:ComboBox x="189" y="315.5" prompt="Placa"/>
 		<s:ComboBox x="354" y="315.5" width="193" prompt="Nro. Identificacion Conductor"/>
 		<s:TextInput x="21" y="346" width="314" prompt="Nombres"/>

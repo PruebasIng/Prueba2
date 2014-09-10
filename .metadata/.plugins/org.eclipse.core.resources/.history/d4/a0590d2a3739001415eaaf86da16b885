@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Module xmlns:fx="http://ns.adobe.com/mxml/2009"
+		   xmlns:s="library://ns.adobe.com/flex/spark"
+		   xmlns:mx="library://ns.adobe.com/flex/mx"
+		   xmlns:ns1="*"
+		   xmlns:FORMULARIOS="PKG_FRICAR_DESKTOP.COMPONENTES.FORMULARIOS.*"
+		   xmlns:COMPONENTES="PKG_FRICAR_DESKTOP.COMPONENTES.*"
+		   xmlns:meproveedorservice="services.meproveedorservice.*"
+		   layout="absolute">
+	
+	<fx:Style source="STYLES/Style_Panel.css"/>
+
+	<FORMULARIOS:FES_Datos_Cliente id="Form_Cliente" x="10" y="38">
+	</FORMULARIOS:FES_Datos_Cliente>
+	<FORMULARIOS:FES_Cliente_Facturador id="Form_Facturador" x="10" y="261">
+	</FORMULARIOS:FES_Cliente_Facturador>
+	<FORMULARIOS:FES_Cliente_Contacto id="Form_Contacto" x="386" y="261">
+	</FORMULARIOS:FES_Cliente_Contacto>
+	<mx:AdvancedDataGrid id="Adg_Cliente" x="10" y="477" width="745" height="180" alpha="0.7"
+						 designViewDataType="flat">
+		<mx:columns>
+			<mx:AdvancedDataGridColumn width="110" dataField="Id_Cliente" editable="false"
+									   headerText="Identificacion"/>
+			<mx:AdvancedDataGridColumn width="210" dataField="Nombre_Cliente" headerText="Razon Social"/>
+			<mx:AdvancedDataGridColumn width="220" dataField="Direccion_Cliente" headerText="Direccion"/>
+			<mx:AdvancedDataGridColumn width="100" dataField="Tel_Cliente" headerText="Telefono"/>
+			<mx:AdvancedDataGridColumn width="100" dataField="Cel_Cliente" headerText="Celular"/>
+		</mx:columns>
+	</mx:AdvancedDataGrid>
+	
+	<COMPONENTES:KEK_Btns_Modificacion id="Btns_Cliente" x="10" y="10" width="360" >
+	</COMPONENTES:KEK_Btns_Modificacion>
+	<COMPONENTES:KES_Btns_Busqueda x="9" y="441" width="368">
+	</COMPONENTES:KES_Btns_Busqueda>
+	
+	
+</mx:Module>

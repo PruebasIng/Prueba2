@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Module xmlns:fx="http://ns.adobe.com/mxml/2009"
+		   xmlns:s="library://ns.adobe.com/flex/spark"
+		   xmlns:mx="library://ns.adobe.com/flex/mx"
+		   xmlns:ns1="*"
+		   xmlns:FORMULARIOS="PKG_FRICAR_DESKTOP.COMPONENTES.FORMULARIOS.*"
+		   xmlns:COMPONENTES="PKG_FRICAR_DESKTOP.COMPONENTES.*"
+		   xmlns:meproveedorservice="services.meproveedorservice.*"
+		   layout="absolute">
+	
+	<fx:Style source="STYLES/Style_Panel.css"/>
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.events.FlexEvent;
+			
+			import valueObjects.Me_proveedor;
+
+			
+			protected function Btns_Proveedor_focusInHandler(event:FocusEvent):void
+			{
+				// TODO Auto-generated method stub
+				Btns_Proveedor.Btn_Insertar.addEventListener(MouseEvent.CLICK, insertar);
+			}
+			
+			protected function insertar(event:MouseEvent):void{
+				
+				var Reg:Me_proveedor = new Me_proveedor();
+/* 				
+				Reg.Tipo_Doc_Proveedor = Data_Model_Proveedor.TDocProv;
+				Reg.Id_Proveedor = Data_Model_Proveedor.DocProv;
+				Reg.Nombre_Proveedor = Data_Model_Proveedor.NomProv;
+				Reg.Direccion_Proveedor = Data_Model_Proveedor.DirProv;
+				Reg.Tel_Proveedor = Data_Model_Proveedor.TelProv;
+				Reg.Cel_Proveedor = Data_Model_Proveedor.CelProv;
+				Reg.Email_Proveedor = Data_Model_Proveedor.EmailProv;
+				Reg.Tipo_Contribuyente = parseInt(Data_Model_Proveedor.TContrib);
+				Reg.Tipo_Regimen = parseInt(Data_Model_Proveedor.TRegimen);
+				Reg.Materia_Prima = Data_Model_Proveedor.MatPrima;
+				Reg.Plazo_Negociacion = parseInt(Data_Model_Proveedor.Plazo);
+				Reg.Forma_Pago = parseInt(Data_Model_Proveedor.FPago);
+				Reg.Estado_Proveedor = parseInt(Data_Model_Proveedor.Estado);
+				Reg.Tipo_Doc_Representante = parseInt(Data_Model_Proveedor.TDocRep);
+				Reg.Id_Representante = Data_Model_Proveedor.DocRep;
+				Reg.Nombres_Representante = Data_Model_Proveedor.NomRep;
+				Reg.Apellidos_Representante = Data_Model_Proveedor.ApeRep;
+				Reg.Nom_Com_Representante = Data_Model_Proveedor.NomComRep;
+				Reg.Email_Representante = Data_Model_Proveedor.EmailRep;
+				Reg.Tipo_Doc_Contacto = parseInt(Data_Model_Proveedor.TDocCont);
+				Reg.Id_Contacto = Data_Model_Proveedor.DocCont;
+				Reg.Nombres_Contacto = Data_Model_Proveedor.NomCont;
+				Reg.Apellidos_Contacto = Data_Model_Proveedor.ApeCont;
+				Reg.Nom_Com_Contacto = Data_Model_Proveedor.NomComCont;
+				Reg.Tel_Contacto = Data_Model_Proveedor.TelCont;
+				Reg.Cel_Contacto = Data_Model_Proveedor.CelCont;
+				Reg.Email_Contacto = Data_Model_Proveedor.EmailCont; */
+				
+				
+				
+				createMe_proveedorResult.token = meproveedorService.createMe_proveedor(Reg); 
+				meproveedorService.commit();
+				meproveedorService.getAllMe_proveedor();
+			}
+			
+			protected function Adg_Proveedor_creationCompleteHandler(event:FlexEvent):void
+			{
+				getAllMe_proveedorResult.token = meproveedorService.getAllMe_proveedor();
+			}
+			
+			
+			
+			protected function Adg_Proveedor_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+/* 				Data_Model_Proveedor.TDocProv = Adg_Proveedor.selectedItem.Tipo_Doc_Proveedor;
+				Data_Model_Proveedor.DocProv = Adg_Proveedor.selectedItem.Id_Proveedor;
+				Data_Model_Proveedor.NomProv = Adg_Proveedor.selectedItem.Nombre_Proveedor;
+				Data_Model_Proveedor.DirProv = Adg_Proveedor.selectedItem.Direccion_Proveedor;
+				Data_Model_Proveedor.TelProv = Adg_Proveedor.selectedItem.Tel_Proveedor;
+				Data_Model_Proveedor.CelProv = Adg_Proveedor.selectedItem.Cel_Proveedor;
+				Data_Model_Proveedor.EmailProv = Adg_Proveedor.selectedItem.Email_Proveedor;
+				Data_Model_Proveedor.TContrib = Adg_Proveedor.selectedItem.Tipo_Contribuyente;
+				Data_Model_Proveedor.TRegimen = Adg_Proveedor.selectedItem.Tipo_Regimen;
+				Data_Model_Proveedor.MatPrima  = Adg_Proveedor.selectedItem.Materia_Prima;
+				Data_Model_Proveedor.Plazo = Adg_Proveedor.selectedItem.Plazo_Negociacion;
+				Data_Model_Proveedor.FPago = Adg_Proveedor.selectedItem.Forma_Pago;
+				Data_Model_Proveedor.Estado = Adg_Proveedor.selectedItem.Estado_Proveedor;
+				Data_Model_Proveedor.TDocRep = Adg_Proveedor.selectedItem.Tipo_Doc_Representante;
+				Data_Model_Proveedor.DocRep = Adg_Proveedor.selectedItem.Id_Representante;
+				Data_Model_Proveedor.NomRep = Adg_Proveedor.selectedItem.Nombres_Representante;
+				Data_Model_Proveedor.ApeRep = Adg_Proveedor.selectedItem.Apellidos_Representante;
+				Data_Model_Proveedor.EmailRep = Adg_Proveedor.selectedItem.Email_Representante;
+				Data_Model_Proveedor.TDocCont = Adg_Proveedor.selectedItem.Tipo_Doc_Contacto;
+				Data_Model_Proveedor.DocCont = Adg_Proveedor.selectedItem.Id_Contacto;
+				Data_Model_Proveedor.NomCont = Adg_Proveedor.selectedItem.Nombres_Contacto;
+				Data_Model_Proveedor.ApeCont = Adg_Proveedor.selectedItem.Apellidos_Contacto;
+				Data_Model_Proveedor.TelCont = Adg_Proveedor.selectedItem.Tel_Contacto;
+				Data_Model_Proveedor.CelCont = Adg_Proveedor.selectedItem.Cel_Contacto;
+				Data_Model_Proveedor.EmailCont = Adg_Proveedor.selectedItem.Email_Contacto; */
+				
+			}
+			
+		]]>
+	</fx:Script>
+	<mx:states>
+		<s:State name="State1"/>
+	</mx:states>
+	
+	<fx:Declarations>
+		
+<!--		<fx:Model id="Data_Model_Proveedor">
+			<Data>
+				<TDocProv>@{Form_Proveedor.Cbx_Tipo_Documento.selectedItem.Codigo_Tipo}</TDocProv>
+				<DocProv>@{Form_Proveedor.Txt_Documento.text}</DocProv>
+				<NomProv>@{Form_Proveedor.Txt_Nom_Razon_Social.Txt_Nom_Razon_Social.text}</NomProv>
+				<DirProv>@{Form_Proveedor.Txt_Direccion.Txt_Direccion.text}</DirProv>
+				<TelProv>@{Form_Proveedor.Txt_Telefono.text}</TelProv>
+				<CelProv>@{Form_Proveedor.Txt_Celular.text}</CelProv>
+				<EmailProv>@{Form_Proveedor.Txt_Email.Txt_Email.text}</EmailProv>
+				<TContrib>@{Form_Proveedor.Cbx_Contribuyente.selectedIndex}</TContrib>
+				<TRegimen>@{Form_Proveedor.Cbx_Regimen.selectedIndex}</TRegimen>
+				<MatPrima>@{Form_Proveedor.Cbx_Materia_Prima.selectedIndex}</MatPrima>
+				<Plazo>@{Form_Proveedor.Cbx_Plazo.selectedItem}</Plazo>
+				<FPago>@{Form_Proveedor.Cbx_Forma_Pago.selectedIndex}</FPago>
+				<Estado>@{Form_Proveedor.Cbx_Estado.selectedIndex}</Estado>
+				<TDocRep>@{Form_Representante.Cbx_Tipo_Documento.selectedItem.Codigo_Tipo}</TDocRep>
+				<DocRep>@{Form_Representante.Txt_Documento.text}</DocRep>
+				<NomRep>@{Form_Representante.Txt_Nombres.Txt_Nombres.text}</NomRep>
+				<ApeRep>@{Form_Representante.Txt_Apellidos.Txt_Apellidos.text}</ApeRep>
+				<NomComRep>{Form_Representante.Txt_Nombres.Txt_Nombres.text} {Form_Representante.Txt_Apellidos.Txt_Apellidos.text}</NomComRep>
+				<EmailRep>@{Form_Representante.Txt_Email.Txt_Email.text}</EmailRep>
+				<TDocCont>@{Form_Contacto.Cbx_Tipo_Documento.selectedItem.Codigo_Tipo}</TDocCont>
+				<DocCont>@{Form_Contacto.Txt_Documento.text}</DocCont>
+				<NomCont>@{Form_Contacto.Txt_Nombres.Txt_Nombres.text}</NomCont>
+				<ApeCont>@{Form_Contacto.Txt_Apellidos.Txt_Apellidos.text}</ApeCont>
+				<NomComCont>{Form_Contacto.Txt_Nombres.Txt_Nombres.text} {Form_Contacto.Txt_Apellidos.Txt_Apellidos.text}</NomComCont>
+				<TelCont>@{Form_Contacto.Txt_Telefono.text}</TelCont>
+				<CelCont>@{Form_Contacto.Txt_Celular.text}</CelCont>
+				<EmailCont>@{Form_Contacto.Txt_Email.Txt_Email.text}</EmailCont>
+			</Data>
+		</fx:Model>-->
+		
+		<s:CallResponder id="createMe_proveedorResult"/>
+		<s:CallResponder id="getAllMe_proveedorResult"/>
+		<meproveedorservice:MeproveedorService id="meproveedorService"
+											   fault="Alert.show(event.fault.faultString + '\n' + event.fault.faultDetail)"
+											   showBusyCursor="true"/>
+		
+		
+		
+		
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<FORMULARIOS:FES_Datos_Proveedor id="Form_Proveedor" x="10" y="48">
+	</FORMULARIOS:FES_Datos_Proveedor>
+	<FORMULARIOS:FES_Prove_Representante id="Form_Representante" x="10" y="252">
+	</FORMULARIOS:FES_Prove_Representante>
+	<FORMULARIOS:FES_Prove_Contacto id="Form_Contacto" x="386" y="252">
+	</FORMULARIOS:FES_Prove_Contacto>
+	<mx:AdvancedDataGrid id="Adg_Proveedor" x="10" y="477" width="745" height="180" alpha="0.7"
+						 click="Adg_Proveedor_clickHandler(event)"
+						 creationComplete="Adg_Proveedor_creationCompleteHandler(event)"
+						 dataProvider="{getAllMe_proveedorResult.lastResult}"
+						 designViewDataType="flat">
+		<mx:columns>
+			<mx:AdvancedDataGridColumn width="110" dataField="Id_Proveedor" editable="false"
+									   headerText="Identificacion"/>
+			<mx:AdvancedDataGridColumn width="210" dataField="Nombre_Proveedor" headerText="Razon Social"/>
+			<mx:AdvancedDataGridColumn width="220" dataField="Direccion_Proveedor" headerText="Direccion"/>
+			<mx:AdvancedDataGridColumn width="100" dataField="Tel_Proveedor" headerText="Telefono"/>
+			<mx:AdvancedDataGridColumn width="100" dataField="Cel_Proveedor" headerText="Celular"/>
+		</mx:columns>
+	</mx:AdvancedDataGrid>
+	
+	
+	<COMPONENTES:KES_Btns_Busqueda x="10" y="442" width="368">
+	</COMPONENTES:KES_Btns_Busqueda>
+	<COMPONENTES:KES_Datos_Complementarios x="765" y="48">
+	</COMPONENTES:KES_Datos_Complementarios>
+	
+
+</mx:Module>

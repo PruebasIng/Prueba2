@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 xmlns:FORMULARIOS="PKG_FRICAR_DESKTOP.COMPONENTES.FORMULARIOS.*"
+		 xmlns:COMPONENTES="PKG_FRICAR_DESKTOP.COMPONENTES.*"
+		 width="500" height="190">
+	
+	<fx:Script>
+		<![CDATA[
+			protected function Rdb_Datos_complementarios_changeHandler(event:Event):void
+			{
+				// TODO Auto-generated method stub
+				if(Rdb_Referencias.selected == true){
+					viewstack1.selectedIndex = 1;
+				}else{
+					if(Rdb_Vehiculos.selected == true){
+						viewstack1.selectedIndex = 2;
+					}else{
+						if(Rdb_Cuentas.selected == true){
+							viewstack1.selectedIndex = 3;
+						}else{
+							viewstack1.selectedIndex = 0;
+						}
+					}
+				}
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<s:RadioButtonGroup id="Rdb_Datos_complementarios" change="Rdb_Datos_complementarios_changeHandler(event)"/>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Label x="24" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="R"/>
+	<s:Label x="42" y="-16.85" color="#000000" fontFamily="Georgia" fontSize="16" text="EFERENCIAS"/>
+	<s:Label x="204" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="V"/>
+	<s:Label x="220" y="-16.85" color="#000000" fontFamily="Georgia" fontSize="16" text="EHICULOS"/>
+	<s:Label x="366" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="C"/>
+	<s:Label x="382" y="-16.9" color="#000000" fontFamily="Georgia" fontSize="16" text="UENTAS"/>
+	<mx:ViewStack id="viewstack1" width="100%" height="643">
+		<s:NavigatorContent width="100%" height="100%" label="Vacio">
+		
+		</s:NavigatorContent>
+		<s:NavigatorContent width="100%" height="100%" label="Referencias">
+			<FORMULARIOS:FES_Referencias x="-1" y="19">
+			</FORMULARIOS:FES_Referencias>
+			<COMPONENTES:KEK_Btns_Modificacion x="128" y="188" width="360">
+			</COMPONENTES:KEK_Btns_Modificacion>
+			<mx:AdvancedDataGrid id="Adg_Referencias" x="0" y="397" width="498" height="180"
+								 alpha="0.7" designViewDataType="flat">
+				<mx:columns>
+					<mx:AdvancedDataGridColumn dataField="col1" headerText="Column 1"/>
+					<mx:AdvancedDataGridColumn dataField="col2" headerText="Column 2"/>
+					<mx:AdvancedDataGridColumn dataField="col3" headerText="Column 3"/>
+				</mx:columns>
+			</mx:AdvancedDataGrid>
+		</s:NavigatorContent>
+		<s:NavigatorContent width="100%" height="100%" label="Vehiculos">
+			<FORMULARIOS:FES_Vehiculo_Conductores x="-1" y="20">
+			</FORMULARIOS:FES_Vehiculo_Conductores>
+			<mx:AdvancedDataGrid id="Adg_Vehiculos" x="0" y="397" width="499" height="180"
+								 alpha="0.7" designViewDataType="flat">
+				<mx:columns>
+					<mx:AdvancedDataGridColumn dataField="col1" headerText="Column 1"/>
+					<mx:AdvancedDataGridColumn dataField="col2" headerText="Column 2"/>
+					<mx:AdvancedDataGridColumn dataField="col3" headerText="Column 3"/>
+				</mx:columns>
+			</mx:AdvancedDataGrid>
+		</s:NavigatorContent>
+		<s:NavigatorContent width="100%" height="100%" label="Cuentas">
+			<FORMULARIOS:FES_Ctas_Bancarias x="-1" y="45">
+			</FORMULARIOS:FES_Ctas_Bancarias>
+			<mx:AdvancedDataGrid id="Adg_Cuentas" x="0" y="397" width="498" height="180" alpha="0.7"
+								 designViewDataType="flat">
+				<mx:columns>
+					<mx:AdvancedDataGridColumn dataField="col1" headerText="Column 1"/>
+					<mx:AdvancedDataGridColumn dataField="col2" headerText="Column 2"/>
+					<mx:AdvancedDataGridColumn dataField="col3" headerText="Column 3"/>
+				</mx:columns>
+			</mx:AdvancedDataGrid>
+		</s:NavigatorContent>
+	</mx:ViewStack>
+	<COMPONENTES:KEK_Btns_Modificacion x="128" y="188" width="360">
+	</COMPONENTES:KEK_Btns_Modificacion>
+	<COMPONENTES:KEK_Btns_Modificacion x="128" y="188" width="360" color="#000000">
+	</COMPONENTES:KEK_Btns_Modificacion>
+	<s:RadioButton id="Rdb_Referencias" x="150" y="-19.85" color="#000000"
+				   groupName="Rdb_Datos_complementarios"/>
+	<s:RadioButton id="Rdb_Vehiculos" x="309" y="-19.85" color="#000000"
+				   groupName="Rdb_Datos_complementarios"/>
+	<s:RadioButton id="Rdb_Cuentas" x="452" y="-19.85" color="#000000"
+				   groupName="Rdb_Datos_complementarios"/>
+</s:Panel>

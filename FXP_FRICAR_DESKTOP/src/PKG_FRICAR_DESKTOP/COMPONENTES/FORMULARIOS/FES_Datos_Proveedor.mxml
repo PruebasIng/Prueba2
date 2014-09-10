@@ -18,19 +18,8 @@
 	<s:Label x="125" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="P"/>
 	<s:Label x="141" y="-16.9" color="#000000" fontFamily="Georgia" fontSize="16" text="ROVEEDOR"/>
 
-	<ns1:KCS_Tipo_Documento id="Cbx_Tipo_Documento" x="10" y="10" width="172">
-	</ns1:KCS_Tipo_Documento>
-	<ns1:KCS_Documento id="Txt_Documento" x="197" y="10" width="110"/>
-	<ns1:KCS_Digito_Verificacion id="Lbl_Digito" x="316" y="11" width="45" height="20"/>
-	<ns1:KCS_Nom_Razon_Social id="Txt_Nom_Razon_Social" x="389" y="11" width="345"/>
-	<ns1:KCS_Direccion id="Txt_Direccion" x="10" y="48" width="350">
-	</ns1:KCS_Direccion>
-	<ns1:KCS_Telefono id="Txt_Telefono" x="389" y="48" width="170"/>
-	<ns1:KCS_Celular id="Txt_Celular" x="583" y="48" width="151"/>
-	<ns1:KCS_Email id="Txt_Email" x="10" y="87" width="350">
-	</ns1:KCS_Email>
-	<ns1:KCS_Tipo_Contribuyente id="Cbx_Contribuyente" x="389" y="87" width="170"/>
-	<ns1:KCS_Tipo_Regimen id="Cbx_Regimen" x="583" y="87" width="150"/>
+
+
 	<s:ComboBox id="Cbx_Materia_Prima" x="10" y="126" width="181" prompt="Materia Prima / insumos">
 		<s:dataProvider>
 			<mx:ArrayList>

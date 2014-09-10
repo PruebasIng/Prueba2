@@ -7,11 +7,7 @@
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-	<ns1:KCS_Documento id="Txt_Documento" x="10" y="83" width="140"/>
-	<ns1:KCS_Apellidos id="Txt_Apellidos" x="10" y="10" width="480">
-	</ns1:KCS_Apellidos>
-	<ns1:KCS_Nombres id="Txt_Nombres" x="10" y="47" width="480">
-	</ns1:KCS_Nombres>
+	
 	<s:TextInput id="Txt_Placa" x="173" y="83" width="140" prompt="Placa"/>
 	
 </s:Group>

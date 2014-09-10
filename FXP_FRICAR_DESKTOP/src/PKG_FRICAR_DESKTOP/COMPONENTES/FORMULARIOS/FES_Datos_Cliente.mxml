@@ -18,19 +18,7 @@
 	<s:Label x="135" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="C"/>
 	<s:Label x="153" y="-16.9" color="#000000" fontFamily="Georgia" fontSize="16" text="LIENTE"/>
 
-	<ns1:KCS_Tipo_Documento id="Cbx_Tipo_Documento" x="10" y="10" width="172">
-	</ns1:KCS_Tipo_Documento>
-	<ns1:KCS_Documento id="Txt_Documento" x="197" y="10" width="110"/>
-	<ns1:KCS_Digito_Verificacion id="Lbl_Digito" x="316" y="11" width="45" height="20"/>
-	<ns1:KCS_Nom_Razon_Social id="Txt_Nom_Razon_Social" x="389" y="11" width="345"/>
-	<ns1:KCS_Direccion id="Txt_Direccion" x="10" y="44" width="350">
-	</ns1:KCS_Direccion>
-	<ns1:KCS_Telefono id="Txt_Telefono" x="389" y="74" width="170"/>
-	<ns1:KCS_Celular id="Txt_Celular" x="583" y="74" width="151"/>
-	<ns1:KCS_Email id="Txt_Email" x="10" y="74" width="350">
-	</ns1:KCS_Email>
-	<ns1:KCS_Tipo_Contribuyente id="Cbx_Contribuyente" x="389" y="109" width="170"/>
-	<ns1:KCS_Tipo_Regimen id="Cbx_Regimen" x="584" y="109" width="150"/>
+
 	<s:HGroup x="-201" y="352">
 	</s:HGroup>
 	<s:VGroup x="-190" y="92">

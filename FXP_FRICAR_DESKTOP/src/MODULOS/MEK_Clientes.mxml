@@ -28,10 +28,6 @@
 		</mx:columns>
 	</mx:AdvancedDataGrid>
 	
-	<COMPONENTES:KEK_Btns_Modificacion id="Btns_Cliente" x="10" y="10" width="360" >
-	</COMPONENTES:KEK_Btns_Modificacion>
-	<COMPONENTES:KES_Btns_Busqueda x="9" y="441" width="368">
-	</COMPONENTES:KES_Btns_Busqueda>
 	
 	
 </mx:Module>

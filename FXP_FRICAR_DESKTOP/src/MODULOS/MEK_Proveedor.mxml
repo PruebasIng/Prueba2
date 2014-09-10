@@ -20,13 +20,13 @@
 			protected function Btns_Proveedor_focusInHandler(event:FocusEvent):void
 			{
 				// TODO Auto-generated method stub
-				Btns_Proveedor.Btn_Insertar.addEventListener(MouseEvent.CLICK, insertar);
+				//Btns_Proveedor.Btn_Insertar.addEventListener(MouseEvent.CLICK, insertar);
 			}
 			
 			protected function insertar(event:MouseEvent):void{
 				
 				var Reg:Me_proveedor = new Me_proveedor();
-				
+/* 				
 				Reg.Tipo_Doc_Proveedor = Data_Model_Proveedor.TDocProv;
 				Reg.Id_Proveedor = Data_Model_Proveedor.DocProv;
 				Reg.Nombre_Proveedor = Data_Model_Proveedor.NomProv;
@@ -53,18 +53,18 @@
 				Reg.Nom_Com_Contacto = Data_Model_Proveedor.NomComCont;
 				Reg.Tel_Contacto = Data_Model_Proveedor.TelCont;
 				Reg.Cel_Contacto = Data_Model_Proveedor.CelCont;
-				Reg.Email_Contacto = Data_Model_Proveedor.EmailCont;
+				Reg.Email_Contacto = Data_Model_Proveedor.EmailCont; */
 				
 				
 				
-				createMe_proveedorResult.token = meproveedorService.createMe_proveedor(Reg); 
-				meproveedorService.commit();
-				meproveedorService.getAllMe_proveedor();
+				//createMe_proveedorResult.token = meproveedorService.createMe_proveedor(Reg); 
+				//meproveedorService.commit();
+				//meproveedorService.getAllMe_proveedor();
 			}
 			
 			protected function Adg_Proveedor_creationCompleteHandler(event:FlexEvent):void
 			{
-				getAllMe_proveedorResult.token = meproveedorService.getAllMe_proveedor();
+				//getAllMe_proveedorResult.token = meproveedorService.getAllMe_proveedor();
 			}
 			
 			
@@ -72,7 +72,7 @@
 			protected function Adg_Proveedor_clickHandler(event:MouseEvent):void
 			{
 				// TODO Auto-generated method stub
-				Data_Model_Proveedor.TDocProv = Adg_Proveedor.selectedItem.Tipo_Doc_Proveedor;
+/* 				Data_Model_Proveedor.TDocProv = Adg_Proveedor.selectedItem.Tipo_Doc_Proveedor;
 				Data_Model_Proveedor.DocProv = Adg_Proveedor.selectedItem.Id_Proveedor;
 				Data_Model_Proveedor.NomProv = Adg_Proveedor.selectedItem.Nombre_Proveedor;
 				Data_Model_Proveedor.DirProv = Adg_Proveedor.selectedItem.Direccion_Proveedor;
@@ -96,7 +96,7 @@
 				Data_Model_Proveedor.ApeCont = Adg_Proveedor.selectedItem.Apellidos_Contacto;
 				Data_Model_Proveedor.TelCont = Adg_Proveedor.selectedItem.Tel_Contacto;
 				Data_Model_Proveedor.CelCont = Adg_Proveedor.selectedItem.Cel_Contacto;
-				Data_Model_Proveedor.EmailCont = Adg_Proveedor.selectedItem.Email_Contacto;
+				Data_Model_Proveedor.EmailCont = Adg_Proveedor.selectedItem.Email_Contacto; */
 				
 			}
 			
@@ -108,7 +108,7 @@
 	
 	<fx:Declarations>
 		
-		<fx:Model id="Data_Model_Proveedor">
+<!--		<fx:Model id="Data_Model_Proveedor">
 			<Data>
 				<TDocProv>@{Form_Proveedor.Cbx_Tipo_Documento.selectedItem.Codigo_Tipo}</TDocProv>
 				<DocProv>@{Form_Proveedor.Txt_Documento.text}</DocProv>
@@ -138,7 +138,7 @@
 				<CelCont>@{Form_Contacto.Txt_Celular.text}</CelCont>
 				<EmailCont>@{Form_Contacto.Txt_Email.Txt_Email.text}</EmailCont>
 			</Data>
-		</fx:Model>
+		</fx:Model>-->
 		
 		<s:CallResponder id="createMe_proveedorResult"/>
 		<s:CallResponder id="getAllMe_proveedorResult"/>
@@ -172,12 +172,11 @@
 		</mx:columns>
 	</mx:AdvancedDataGrid>
 	
-	<COMPONENTES:KEK_Btns_Modificacion id="Btns_Proveedor" x="10" y="10" width="360" focusIn="Btns_Proveedor_focusInHandler(event)">
-	</COMPONENTES:KEK_Btns_Modificacion>
+	
 	<COMPONENTES:KES_Btns_Busqueda x="10" y="442" width="368">
 	</COMPONENTES:KES_Btns_Busqueda>
 	<COMPONENTES:KES_Datos_Complementarios x="765" y="48">
 	</COMPONENTES:KES_Datos_Complementarios>
-	<s:Label x="400" y="448" text="{Form_Proveedor.Cbx_Tipo_Documento.selectedItem.Codigo_Tipo}"/>
+	
 
 </mx:Module>

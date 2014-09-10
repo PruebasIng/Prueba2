@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 xmlns:ns1="*"
+		 width="744" height="190">
+	
+	
+	
+	<fx:Declarations>
+		
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Label x="10" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="D"/>
+	<s:Label x="28" y="-16.9" color="#000000" fontFamily="Georgia" fontSize="16" text="ATOS"/>
+	<s:Label x="80" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="D"/>
+	<s:Label x="99" y="-16.9" color="#000000" fontFamily="Georgia" fontSize="16" text="EL"/>
+	<s:Label x="125" y="-26" color="#000000" fontFamily="Georgia" fontSize="28" text="P"/>
+	<s:Label x="141" y="-16.9" color="#000000" fontFamily="Georgia" fontSize="16" text="ROVEEDOR"/>
+
+	<ns1:KCS_Tipo_Documento id="Cbx_Tipo_Documento" x="10" y="10" width="172">
+	</ns1:KCS_Tipo_Documento>
+	<ns1:KCS_Documento id="Txt_Documento" x="197" y="10" width="110"/>
+	<ns1:KCS_Digito_Verificacion id="Lbl_Digito" x="316" y="11" width="45" height="20"/>
+	<ns1:KCS_Nom_Razon_Social id="Txt_Nom_Razon_Social" x="389" y="11" width="345"/>
+	<ns1:KCS_Direccion id="Txt_Direccion" x="10" y="48" width="350">
+	</ns1:KCS_Direccion>
+	<ns1:KCS_Telefono id="Txt_Telefono" x="389" y="48" width="170"/>
+	<ns1:KCS_Celular id="Txt_Celular" x="583" y="48" width="151"/>
+	<ns1:KCS_Email id="Txt_Email" x="10" y="87" width="350">
+	</ns1:KCS_Email>
+	<ns1:KCS_Tipo_Contribuyente id="Cbx_Contribuyente" x="389" y="87" width="170"/>
+	<ns1:KCS_Tipo_Regimen id="Cbx_Regimen" x="583" y="87" width="150"/>
+	<s:ComboBox id="Cbx_Materia_Prima" x="10" y="126" width="181" prompt="Materia Prima / insumos">
+		<s:dataProvider>
+			<mx:ArrayList>
+				<fx:String>Materia Prima Seca</fx:String>
+				<fx:String>Materia Prima Carnica</fx:String>
+				<fx:String>Enfoque</fx:String>
+				<fx:String>Aseo</fx:String>
+				<fx:String>Cafeteria</fx:String>
+				<fx:String>Papeleria</fx:String>
+				<fx:String>Otros</fx:String>
+			</mx:ArrayList>
+		</s:dataProvider>
+	</s:ComboBox>
+	<s:HGroup x="-201" y="352">
+	</s:HGroup>
+	<s:ComboBox id="Cbx_Plazo" x="214" y="126" prompt="Plazo Negociacion">
+		<s:dataProvider>
+			<mx:ArrayList>
+				<fx:String>0</fx:String>
+				<fx:String>8</fx:String>
+				<fx:String>15</fx:String>
+				<fx:String>30</fx:String>
+				<fx:String>45</fx:String>
+				<fx:String>60</fx:String>
+				<fx:String>90</fx:String>
+			</mx:ArrayList>
+		</s:dataProvider>
+	</s:ComboBox>
+	<s:VGroup x="-190" y="92">
+	</s:VGroup>
+	
+	<s:ComboBox id="Cbx_Forma_Pago" x="389" y="126" width="170" prompt="Forma de Pago">
+		<s:dataProvider>
+			<mx:ArrayList>
+				<fx:String>Cheque</fx:String>
+				<fx:String>Efectivo</fx:String>
+				<fx:String>Tarjeta Debito</fx:String>
+				<fx:String>Tarjeta Credito</fx:String>
+				<fx:String>Consignacion Bancaria</fx:String>
+				<fx:String>Transferencia Electronica</fx:String>
+			</mx:ArrayList>
+		</s:dataProvider>
+	</s:ComboBox>	
+	<s:ComboBox id="Cbx_Estado" x="583" y="126" width="150" prompt="Estado Proveedor" selectedIndex="0">
+		<s:dataProvider>
+			<s:ArrayList>
+				<fx:String>Activo</fx:String>
+				<fx:String>Cancelado</fx:String>
+				<fx:String>Suspendido</fx:String>
+			</s:ArrayList>
+		</s:dataProvider>
+		
+	</s:ComboBox>	
+	
+	
+	
+	
+	
+	
+</s:Panel>
